@@ -5,14 +5,13 @@ import Button from "./Button";
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 16px;
+  padding: 10px;
 `;
 
 const Label = styled.div`
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   flex: 1;
-  margin-right: 16px;
+  margin-left: 24px;
 `;
 
 interface Props {

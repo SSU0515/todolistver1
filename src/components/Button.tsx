@@ -7,6 +7,7 @@ const Container = styled.button`
   border-radius: 4px;
   padding: 8px 16px;
   color: #fff;
+  font-size: 20px;
   &:hover {
     background: ${(props) => props.color};
     opacity: 0.8;
@@ -23,9 +24,9 @@ interface Props {
   color?: string;
 }
 
-const Button = ({ label, onClick, color = "#ff5722" }: Props) => {
+const Button = ({ label, onClick, color = "#000000" }: Props) => {
   return (
-    <Container color={color} onClick={onClick}>
+    <Container className="btn" color={color} onClick={onClick}>
       {label}
     </Container>
   );

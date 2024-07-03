@@ -59,7 +59,7 @@ const ToDoInput = ({ onAdd }: Props) => {
         <Title label="TODO추가" />
         <InputContainer>
           <TextInput value={todo} onChange={setToDo} />
-          <Button label="추가" color="#304ffe" onClick={onAddTodo} />
+          <Button label="+" color="#f54d8b" onClick={onAddTodo} />
         </InputContainer>
       </Contents>
     </Container>

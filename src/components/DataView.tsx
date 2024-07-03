@@ -1,16 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import Title from "./Title";
 import ToDoList from "./ToDoList";
+import Title from "./Title";
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background: #fff;
-  padding: 32px;
-  border-radius: 15px;
 `;
 
 interface Props {

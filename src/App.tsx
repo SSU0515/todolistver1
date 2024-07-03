@@ -9,9 +9,11 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  margin: 0 auto;
+  max-width: 650px;
   height: 100vh;
-  background: #eee;
+  background: url("https://i.pinimg.com/736x/ed/54/96/ed5496b885f5d7833b307305470960af.jpg")
+    center top no-repeat;
 `;
 
 const ShowInputButton = styled.div`
@@ -23,6 +25,7 @@ const ShowInputButton = styled.div`
 
 function App() {
   const [todo, setToDo] = useState("");
+  console.log(todo);
   const [toDoList, setToDoList] = useState([
     "react공부하기",
     "운동하기",
@@ -39,16 +42,16 @@ function App() {
     setToDoList(toDoList.filter((it) => it !== todo));
   };
   return (
-    <Container>
-      <DataView toDoList={toDoList} onDelete={onDelete} />
-      {showTodoAdd && <ToDoInput onAdd={onAdd} />}
+    <Container className="App">
       <ShowInputButton>
         <Button
           label={showTodoAdd ? "닫기" : "할 일 추가"}
-          color={showTodoAdd ? undefined : "#304ffe"}
+          color={showTodoAdd ? undefined : "#dd9cb4"}
           onClick={() => setShowTodoAdd(!showTodoAdd)}
         />
       </ShowInputButton>
+      {showTodoAdd && <ToDoInput onAdd={onAdd} />}
+      <DataView toDoList={toDoList} onDelete={onDelete} />
     </Container>
   );
 }
